@@ -1,0 +1,16 @@
+name = "temp-email-worker"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "temp-email-db"
+database_id = "722cd05e-1c2f-41e4-90fb-6bd63b59d1f8"
+
+[vars]
+ADMIN_TOKEN = "dev-admin-token"
+API_TOKEN = "dev-api-token"
+FORWARD_TO = "78810565@qq.com"
+
+[triggers]
+crons = ["0 * * * *"] # 每小时执行一次，检查并清理超过48小时的数据
